@@ -11,25 +11,12 @@ Prima la logica in italiano e poi traduciamo in codice.
 */
 
 const arrayObject = document.getElementById("team")
-const provaImg = document.getElementById("provaImg")
-
-let imgArray = ['img/wayne-barnett-founder-ceo.jpg', 'img/angela-caroll-chief-editor.jpg']
-
-let immagineCandidato = "";
-
-for (let i = 0; i < imgArray.length; i++) {
-    const imgWrapper = `<div><img src="${imgArray[i]}"></div>`;
-    immagineCandidato += imgWrapper;
-}
-
-// provaImg.innerHTML = immagineCandidato;
-
 
 const team = [
     {
         "nome": "Wayne Barnett",
         "ruolo": "Founder & CEO",
-        "foto": immagineCandidato
+        "foto": "wayne-barnett-founder-ceo.jpg"
     },
 
     {
@@ -71,7 +58,8 @@ for (let key in team) {
 for (let i = 0; i < team.length; i++) {
     let key = team[i];
     let keyElement = document.createElement("div");
-    keyElement.innerHTML = key.nome + " - " + key.ruolo + " - " + key.foto + " - ";
+    keyElement.innerHTML =`<img src="img/${key.foto}"><br>${key.nome}<br>${key.ruolo}`;
+    // keyElement.innerHTML = key.nome + " - " + key.ruolo + " - " + key.foto + " - ";
     arrayObject.append(keyElement);
 }
 
