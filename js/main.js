@@ -69,6 +69,6 @@ for (let key in team) {
 for (let i = 0; i < team.length; i++) {
     let key = team[i];
     let keyElement = document.createElement("div");
-    keyElement.innerHTML = key.nome + " " + key.ruolo + " " + key.foto + " " ;
+    keyElement.innerHTML = key.nome + " - " + key.ruolo + " - " + key.foto + " - " ;
     arrayObject.append(keyElement);
 }
