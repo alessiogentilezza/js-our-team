@@ -7,10 +7,11 @@
 body {
     font-family: sans-serif;
     padding: 20px;
+    background-color: rgb(183, 185, 185);
 }
 
 .container {
-    max-width: 1170px;
+    width: 1000px;
     margin: 0 auto;
     background-color: #b91547;
     text-align: center;
@@ -21,8 +22,14 @@ body {
 #team {
     font-size: 20px;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
-
+.wrap {
+    width: calc(100% /3);
+    padding: 10px 0;
+}
 img {
-    height: 200px;
+    height: 250px;
+    border-radius: 10px;
 }

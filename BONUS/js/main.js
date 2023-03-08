@@ -4,10 +4,6 @@ Trasformare la stringa foto in una immagine effettiva
 
 BONUS 2:
 Organizzare i singoli membri in card/schede
-
-Consigli del giorno:
-Ragioniamo come sempre a step.
-Prima la logica in italiano e poi traduciamo in codice.
 */
 
 const arrayObject = document.getElementById("team")
@@ -58,8 +54,9 @@ for (let key in team) {
 for (let i = 0; i < team.length; i++) {
     let key = team[i];
     let keyElement = document.createElement("div");
-    keyElement.innerHTML =`<img src="img/${key.foto}"><br>${key.nome}<br>${key.ruolo}`;
-    // keyElement.innerHTML = key.nome + " - " + key.ruolo + " - " + key.foto + " - ";
+    keyElement.classList.add("wrap")
+    keyElement.innerHTML = `<img src="img/${key.foto}">
+                            <p class="nome">${key.nome}</p>
+                            <p class="ruolo">${key.ruolo}</p>`;
     arrayObject.append(keyElement);
 }
-
